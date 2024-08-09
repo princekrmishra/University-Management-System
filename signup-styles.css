@@ -19,11 +19,11 @@ body{
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100vw;
-  }
+}
 
   
 
-  .signup-name{
+.signup-name{
     justify-content: center;
     width: 540px;
     height: 50px;
@@ -32,9 +32,9 @@ body{
     margin-bottom: 10px;
     color: #fff;
     /*left:-1000px;*/
-  }
+}
 
-  .signup-box{
+.signup-box{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -43,21 +43,21 @@ body{
     height: 650px;
     padding: 30px;
     backdrop-filter: blur(200px);
-  }
+}
 
 .signup-header{
     text-align: center;
     margin: 20px 0 40px 0;
-  }
+}
 
-  .signup-header header{
+.signup-header header{
     color: #dfdfdf;
     font-size: 30px;
     font-weight: 600;
   }
 
   .input-box .input-field{
-    width: 255px;
+    width: 268px;
     height: 60px;
     font-size: 17px;
     padding: 0 25px;
@@ -69,13 +69,14 @@ body{
     transition: .1s;
   }
 
+
   ::placeholder{
     font-weight: 500;
     color: #222;
   }
 
   .input-field:focus{
-    width: 265px;
+    width: 270px;
   }
   a{
     text-decoration: none;
@@ -98,7 +99,7 @@ body{
     border-radius: 30px;
     cursor: pointer;
     transition: .3s;
-  }
+}
 
   
 .submit-btn:hover{
@@ -106,12 +107,13 @@ body{
     transition: 0.2s;
     color: white;
   
-  }
-  .link{
+}
+  
+.link{
     color: white;
-  }
+}
 
-  .input-submit label{
+.input-submit label{
     position: absolute;
     top: 45%;
     left: 50%;
@@ -120,16 +122,16 @@ body{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     cursor: pointer;
-  }
+}
 
-  .sign-up-link{
+.sign-up-link{
     text-align: center;
     font-size: 20px;
     margin-top: 20px;
     color: rgb(255, 255, 255);
-  }
+}
 
-  .sign-up-link a{
+.sign-up-link a{
     color: rgb(255, 255, 255);
     font-weight: 600;
-  }
+}

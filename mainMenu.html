@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System Dashboard</title>
+    <link rel="stylesheet" href="./mainStyles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>University Dashboard</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Grades</a></li>
+            <li><a href="#">Faculty</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Welcome to the University Management System</h1>
+        </header>
+
+        <section class="statistics">
+            <div class="stat-box">
+                <h3>Total Students</h3>
+                <p id="student-count">1500</p>
+            </div>
+            <div class="stat-box">
+                <h3>Total Courses</h3>
+                <p id="course-count">120</p>
+            </div>
+            <div class="stat-box">
+                <h3>Total Faculty</h3>
+                <p id="faculty-count">75</p>
+            </div>
+        </section>
+
+        <section class="updates">
+            <h2>Recent Updates</h2>
+            <ul id="updates-list">
+                <li>New course added: Web Development</li>
+                <li>Final exams schedule released</li>
+                <li>New faculty member joined the Computer Science department</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
