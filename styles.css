@@ -94,28 +94,39 @@ a:hover{
   text-decoration: underline;
 }
 section a{
-  color: #555;
+  color: #fff;
 }
 .input-submit{
   position: relative;
 }
-
+.direct{
+  width: 150px;
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
 
 .submit-btn{
-  width: 120px;
+  width: 150px;
   height: 60px;
-  background: #222;
+  background-color: #222;
+  color: #fff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: .3s;
-  
 }
 
+  
 .submit-btn:hover{
-  background: green;
-  transition: 0.2s;
-
+    
+    background: rgb(32, 163, 56);
+    transition: 0.2s;
+    color: white;
 }
 
 .input-submit label{
