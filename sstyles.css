@@ -1,0 +1,355 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar with Gradient */
+header {
+    background: linear-gradient(90deg, #336699, #4a90e2); /* Gradient from dark to light blue */
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Hero Banner with Gradient Overlay */
+.hero {
+    position: relative;
+    background-image: url('campus-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.6); /* Semi-transparent overlay for readability */
+    background: linear-gradient(180deg, rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.2)); /* Gradient overlay */
+}
+
+.hero-content {
+    position: relative; /* Ensures content appears over the overlay */
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background-color: #ffdd57;
+    color: #003366;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #ffcc33;
+}
+
+/* Programs Section */
+.programs {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Gradient background */
+}
+
+.programs h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.program-card {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.program-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+/* Program Card Hover Color Changes */
+.program-card:hover h3 {
+    color: #4a90e2; /* Change heading color on hover */
+}
+
+.program-card:hover p {
+    color: #333;
+}
+
+/* Hero Banner */
+.hero {
+    background-image: url('./assets/hero.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: none; /* Hide the image since it's used as a background */
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background-color: #ffdd57;
+    color: #003366;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #ffcc33;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Campus Highlights Section */
+.highlights {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f9ff, #ffffff); 
+}
+
+.highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.highlight-card {
+    display: block;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+/* Highlight Card Hover Color Changes */
+.highlight-card:hover h3 {
+    color: #4a90e2; /* Change heading color on hover */
+}
+
+.highlight-card:hover p {
+    color: #333;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonials-slider {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card h4 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* Footer with Gradient */
+footer {
+    background: linear-gradient(90deg, #336699, #4a90e2); /* Gradient matching the navbar */
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.footer-column h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffdd57;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 0.875rem;
+}
+
+#name{
+    color: #21c78a;
+}
+

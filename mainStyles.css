@@ -1,29 +1,217 @@
-.navbar{
-    background-color: rgb(255, 255, 255);
-    width: 100vw;
-    height: 50px;
-  }
-.navbar li{
-    float:left;
-    list-style: none; 
-    margin: 13px 20px;
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7fafc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
 }
-.navbar ul{
-    overflow: auto;
-}
-.navbar li a{
-   
-    text-decoration: none;
-    color: black;
-}
-.search{
-    float: right;
-    color: white;
-    padding: 12px 75px;
-}
-.navbar input{
-    border: 2px solid black;
-    border-radius: 14px;
 
-    width: 129px;
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #00b4db, #0083b0); /* Attractive Gradient */
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
 }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 3rem;
+    height: 3rem;
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffdd57;
+    transform: scale(1.05);
+}
+
+/* Sidebar Profile Section */
+.profile-menu {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.profile-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.profile-menu img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    border: 2px solid #00b4db;
+}
+
+.profile-menu h2 {
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.profile-menu p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.profile-menu ul {
+    margin-top: 1.5rem;
+}
+
+.profile-menu ul li a {
+    display: block;
+    padding: 0.75rem;
+    font-size: 1.05rem;
+    color: #007bff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-menu ul li a:hover {
+    background-color: #f0f4f8;
+    color: #0056b3;
+}
+
+/* Dashboard Tiles Styling */
+.dashboard-tile {
+    background: linear-gradient(120deg, #fff, #f0f0f0); /* Subtle gradient for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-tile:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-tile .icon {
+    font-size: 3.5rem;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.dashboard-tile h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-tile p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-tile a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-tile a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Notifications Section */
+.notifications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease;
+}
+
+.notifications-list li:hover {
+    background-color: #f0f8ff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 0.75rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-tile {
+        padding: 1.5rem;
+    }
+
+    .profile-menu {
+        padding: 1rem;
+    }
+}
+
+

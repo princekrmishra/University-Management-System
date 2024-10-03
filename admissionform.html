@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - Demo University</title>
+    <link rel="stylesheet" href="admission.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="DU Logo" class="logo-img">
+                <h1>Demo University</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./dashBoard.html">Home</a></li>
+                <li><a href="./admission1.html">Programs</a></li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admission Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Admission Form</h2>
+            <form id="admissionForm" action="/submit-form" method="POST">
+                <!-- Student Details -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" readonly>
+
+                <!-- Address Details -->
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="marks">Marks Obtained in 12th :</label>
+                <input type="text" id="marks" name="marks" required>
+
+                <label for="marks">Total Marks in 12th :</label>
+                <input type="text" id="marks" name="marks" required>
+                
+                <label for="marks">Marks Obtained in 10th :</label>
+                <input type="text" id="marks" name="marks" required>
+
+                <label for="marks">Total Marks in 10th :</label>
+                <input type="text" id="marks" name="marks" required>
+
+                <label for="FatherName">Father's Name:</label>
+                <input type="text" id="FatherName" name="FatherName" required>
+
+                <label for="MotherName">Mother's Name:</label>
+                <input type="text" id="MotherName" name="MotherName" required>
+
+                <button type="submit" class="cta-btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Demo University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get query parameter for program
+        const urlParams = new URLSearchParams(window.location.search);
+        const program = urlParams.get('program');
+
+        // Set the program field value
+        document.getElementById('program').value = program;
+    </script>
+
+</body>
+</html>

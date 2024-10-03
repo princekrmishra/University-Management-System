@@ -1,25 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>University Management System</title>
+    <!-- Tailwind CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./mainStyles.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #f0f4f8;
+        }
+
+        /* Custom Styles for Main Dashboard Tiles */
+        .dashboard-tile {
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .dashboard-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile section */
+        .profile-menu {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        /* Notification List Styling */
+        .notifications-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .notifications-list li:hover {
+            background-color: #f9fafb;
+        }
+
+        .btn-primary {
+            background-color: #28a745; /* Green color */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .icon {
+            font-size: 2rem;
+        }
+
+        /* Enhancing Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .profile-menu {
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact us</a></li>
-                <div class="search">
-                    <input type="text" name="search" id="search" placeholder="Search this website">
-                </div>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center space-x-4">
+                <img src="./assets/logo.png" alt="University Logo" class="w-12 h-12" aria-hidden="true">
+                <h1 class="text-2xl font-bold">University Management System</h1>
+            </div>
+            <nav class="space-x-6">
+                <a href="./dashBoard.html" class="hover:underline" aria-label="Go to Dashboard">Dashboard</a>
+                <a href="./admission1.html" class="hover:underline" aria-label="Go to Courses">Courses</a>
+                <a href="#" class="hover:underline" aria-label="Go to Exams">Exams</a>
+                <a href="#" class="hover:underline" aria-label="Go to Notifications">Notifications</a>
+                <a href="#" class="hover:underline" aria-label="Go to Profile">Profile</a>
+                <a href="#" class="hover:underline" aria-label="Log Out">Logout</a>
+            </nav>
+        </div>
     </header>
-    
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Left Sidebar: Profile & Quick Links -->
+        <aside class="col-span-1">
+            <div class="profile-menu p-6 bg-gradient-to-r from-blue-500 to-blue-300 text-white rounded-lg shadow-lg">
+                <img src="./assets/profile.png" alt="Profile Picture of Prince Kumar Mishra" class="w-32 h-32 rounded-full mx-auto" aria-hidden="true">
+                <h2 class="text-center text-xl font-bold mt-4">Prince Kumar Mishra</h2>
+                <p class="text-center text-gray-200">Student</p>
+                <ul class="mt-4 space-y-3">
+                    <li><a href="#" class="block text-center py-2 text-blue-100 hover:bg-blue-600 hover:text-white rounded" aria-label="View Profile">View Profile</a></li>
+                    <li><a href="#" class="block text-center py-2 text-blue-100 hover:bg-blue-600 hover:text-white rounded" aria-label="Settings">Settings</a></li>
+                    <li><a href="#" class="block text-center py-2 text-blue-100 hover:bg-blue-600 hover:text-white rounded" aria-label="Log Out">Logout</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- Main Dashboard Tiles -->
+        <section class="col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Attendance -->
+                <div class="dashboard-tile p-6 text-center" role="button" tabindex="0">
+                    <i class="icon fas fa-check-circle text-blue-500" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mt-4">Attendance</h3>
+                    <p class="text-gray-600 mt-2">Check your attendance status</p>
+                    <a href="./attendance.html" class="btn-primary mt-4" aria-label="View Attendance">View</a>
+                </div>
+                <!-- Marks -->
+                <div class="dashboard-tile p-6 text-center" role="button" tabindex="0">
+                    <i class="icon fas fa-graduation-cap text-green-500" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mt-4">Marks</h3>
+                    <p class="text-gray-600 mt-2">View your grades</p>
+                    <a href="./marks.html" class="btn-primary mt-4" aria-label="View Marks">View</a>
+                </div>
+                <!-- Fee Payment -->
+                <div class="dashboard-tile p-6 text-center" role="button" tabindex="0">
+                    <i class="icon fas fa-credit-card text-red-500" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mt-4">Fee Payment</h3>
+                    <p class="text-gray-600 mt-2">Pay your semester fees</p>
+                    <a href="#" class="btn-primary mt-4" aria-label="Pay Fees">Pay Now</a>
+                </div>
+                <!-- Timetable -->
+                <div class="dashboard-tile p-6 text-center" role="button" tabindex="0">
+                    <i class="icon fas fa-calendar-alt text-purple-500" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mt-4">Timetable</h3>
+                    <p class="text-gray-600 mt-2">Check your class schedule</p>
+                    <a href="#" class="btn-primary mt-4" aria-label="View Timetable">View</a>
+                </div>
+                <!-- Notifications -->
+                <div class="dashboard-tile p-6 text-center" role="button" tabindex="0">
+                    <i class="icon fas fa-bell text-yellow-500" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mt-4">Notifications</h3>
+                    <p class="text-gray-600 mt-2">View recent updates</p>
+                    <a href="#" class="btn-primary mt-4" aria-label="View Notifications">View</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notification Section -->
+    <section class="container mx-auto mt-8 px-4">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Recent Notifications</h2>
+            <ul class="notifications-list space-y-4">
+                <li>Exam schedule released for mid-semester exams.</li>
+                <li>Project submission deadline extended to next week.</li>
+                <li>New elective courses added for the upcoming semester.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 University Management System. All rights reserved.</p>
+            <a href="#" class="text-gray-400 hover:underline">Privacy Policy</a> |
+            <a href="#" class="text-gray-400 hover:underline">Terms of Service</a> |
+            <a href="#" class="text-gray-400 hover:underline">Contact Us</a>
+        </div>
+    </footer>
 </body>
+
 </html>
